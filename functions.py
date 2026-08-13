@@ -99,8 +99,8 @@ def organize(directory, files):
             if extension in file_extensions:
                 folder = file_type
                 break
-        else:
-            folder = "other"
+            else:
+                folder = "other"
 
         source = os.path.join(directory, file)
         destination = os.path.join(directory, folder)
@@ -118,7 +118,7 @@ def organize(directory, files):
         except PermissionError:
             print("-Premission denied, Unable to access the file.")
             counts["skipped"] += 1
-        
+
         counts["total"] += 1
         time.sleep(0.5)
 
